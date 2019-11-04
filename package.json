@@ -1,0 +1,37 @@
+{
+  "name": "taget-label-action",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A GitHub Action that checks if the pull request target branch matches with its labels.",
+  "keywords": [
+    "actions",
+    "target",
+    "label"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logerfo/target-label-action.git"
+  },
+  "author": {
+    "email": "bruno@logerfo.tk",
+    "name": "Bruno Logerfo",
+    "url": "https://github.com/Logerfo"
+  },
+  "homepage": "https://github.com/target-label-action",
+  "bugs": "https://github.com/target-label-action/issues",
+  "license": "MIT",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "ncc build src/main.js",
+    "lint": "eslint src/main.js"
+  },
+  "dependencies": {
+    "@actions/core": "1.2.0",
+    "@actions/github": "1.1.0",
+    "js-yaml": "3.13.1"
+  },
+  "devDependencies": {
+    "eslint": "6.6.0",
+    "@zeit/ncc": "0.20.5"
+  }
+}

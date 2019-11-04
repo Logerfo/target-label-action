@@ -1,0 +1,27 @@
+name: taget-label-action
+description: Check if the pull request target branch matches with its labels.
+author: Bruno Logerfo
+
+branding:
+  icon: git-pull-request
+  color: green
+
+inputs:
+  github-token:
+    description: The `GITHUB_TOKEN` secret.
+    required: true
+  config-path:
+    description: The optional configuration file path.
+    default: .github/target-label.yml
+  apply:
+    description: |
+      `never` to never apply labels;
+      `first` to always apply the first label;
+      `single` to only apply when the number of labels is one.
+
+      The default value is `never`.
+    default: never
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
