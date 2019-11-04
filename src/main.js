@@ -73,7 +73,7 @@ async function check() {
         return;
     }
     core.info(`Config file loaded from ${CONFIG_PATH}`);
-    const target = context.payload.pull_request.base,
+    const target = context.payload.pull_request.base.ref,
         targetLabels = config[target];
     if (!targetLabels) {
         core.info(`Branch ${target} not specified in the config file. Stepping out...`);
