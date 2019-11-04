@@ -18,6 +18,7 @@ jobs:
     name: Target Label
     runs-on: ubuntu-16.04
     steps:
+    - uses: actions/checkout@master
     - uses: Logerfo/target-label-action@0.0.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -36,6 +37,7 @@ jobs:
     name: Target Label
     runs-on: ubuntu-16.04
     steps:
+    - uses: actions/checkout@master
     - uses: Logerfo/target-label-action@0.0.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
