@@ -41,7 +41,7 @@ jobs:
     - uses: Logerfo/target-label-action@0.0.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
-        config-path: .github/target-label.yml # The path of the addtional configurations file
+        config-path: .github/target-label.yml # The path of the addtional configurations file.
         apply: never # `never` to never apply labels;
                      # `first` to always apply the first label;
                      # `single` to only apply when the number of labels is one.
